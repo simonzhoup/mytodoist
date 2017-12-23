@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .forms import Register,Login
 
-# Create your views here.
+def index(request):
+    reform = Register()
+    loform = Login()
+    return render(request,'base.html',{'reform': reform,'loform':loform})
